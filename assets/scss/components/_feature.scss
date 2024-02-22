@@ -1,0 +1,51 @@
+@use '../util' as utl;
+
+.feature {
+  display: grid;
+  gap: utl.rem(24);
+
+  @media (width >= utl.em(1110)) {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    gap: utl.rem(30);
+  }
+
+  &__pic {
+    @media (width >= utl.em(1110)) {
+      grid-column: 1 / 3;
+    }
+  }
+
+  &__image {}
+
+  &__headline {
+    font-size: var(--font-xl);
+    font-weight: 800;
+    color: var(--hue-darkblue);
+  }
+
+  &__description {
+
+    p {
+      margin-block-end: utl.rem(30);
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    background-color: var(--hue-red);
+    color: var(--hue-white);
+    font-size: utl.rem(14);
+    font-weight: 700;
+    letter-spacing: 0.31em;
+    text-transform: uppercase;
+    padding: utl.rem(12) utl.rem(32);
+    justify-self: start;
+  
+    &:hover {
+      background-color: var(--hue-darkblue);
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@use '../util' as utl;
+
+.blog {
+  display: grid;
+  gap: utl.rem(30);
+
+  @media (width >= utl.em(1110)) {
+    grid-template-columns: subgrid;
+    grid-column: 1 / -1;
+    padding-block-start: utl.rem(40);
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: utl.rem(100) auto;
+    grid-template-rows: repeat(3, auto);
+    gap: utl.rem(10) utl.rem(30);
+  }
+
+  &__image {
+    grid-row: 1 / 4;
+  }
+
+  &__number {
+    color: var(--hue-lightgrey);
+    font-size: var(--font-m);
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &__headline {
+    align-self: center;
+
+    a {
+      color: var(--hue-darkblue);
+      font-size: var(--font-xs);
+      font-weight: 800;
+      line-height: 1.1;
+
+      &:hover {
+        color: var(--hue-red);
+      }
+    }
+  }
+
+  &__description {
+    align-self: end;
+    font-size: var(--font-body);
+  }
+}

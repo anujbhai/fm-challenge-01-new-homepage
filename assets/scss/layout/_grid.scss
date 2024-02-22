@@ -1,0 +1,11 @@
+@use '../util' as utl;
+.grid {
+  display: grid;
+  gap: utl.rem(64);
+
+  @media (width >= utl.em(1110)) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: utl.rem(300) auto auto;
+    gap: utl.rem(30);
+  }
+}

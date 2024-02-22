@@ -1,0 +1,16 @@
+@use '../util' as utl;
+
+:root {
+  --hue-white: #FFFDFA;
+  --hue-darkblue: #00001A;
+  --hue-grey: #5E607A;
+  --hue-red: #F15D51;
+  --hue-lightgrey: #C5C6CE;
+  --hue-yellow: #E9AA52;
+  --font-xl: #{clamp(utl.rem(40), 2.147887323943662rem + 1.5023474178403755vw, utl.rem(56))};
+  --font-l: #{clamp(utl.rem(32), 1.823943661971831rem + 0.7511737089201878vw, utl.rem(40))};
+  --font-m: #{utl.rem(32)};
+  --font-s: #{utl.rem(20)};
+  --font-xs: #{utl.rem(18)};
+  --font-body: #{utl.rem(15)};
+}

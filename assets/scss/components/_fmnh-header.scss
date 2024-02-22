@@ -1,0 +1,44 @@
+@use '../util' as utl;
+
+.fmnh-header {
+  display: flex;
+  justify-content: space-between;
+  padding-block: utl.rem(30);
+
+  @media (width >= utl.rem(1110)) {
+    padding-block: utl.rem(90) utl.rem(55);
+  }
+  
+  &__logo {
+    width: utl.rem(45);
+  
+    @media (width >= utl.rem(1110)) {
+      width: utl.rem(64);
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: utl.rem(40);
+  
+    @media (width < utl.rem(1110)) {
+      flex-direction: column;
+      gap: utl.rem(24);
+    }
+  }
+
+  &__link {
+    color: var(--hue-darkblue);
+    font-size: var(--font-xs);
+    line-height: 1.3;
+
+    @media (width >= utl.rem(1110)) {
+      font-size: var(--font-body);
+      color: var(--hue-grey);
+    }
+
+    &:hover {
+      color: var(--hue-red);
+    }
+  }
+}

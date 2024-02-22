@@ -1,0 +1,45 @@
+@use '../util' as utl;
+
+.new {
+  background-color: var(--hue-darkblue);
+  padding: utl.rem(24) utl.rem(20);
+
+  @media (width >= utl.em(1110)) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+  }
+
+  &__title {
+    color: var(--hue-yellow);
+    font-size: var(--font-l);
+  }
+
+  &__post {
+    padding-block: utl.rem(30);
+    border-block-end: 1px solid var(--hue-grey);
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__headline {
+    font-size: var(--font-s);
+    font-weight: 800;
+    margin-block-end: utl.rem(8);
+
+    a {
+      color: var(--hue-white);
+      display: inline-block;
+
+      &:hover {
+        color: var(--hue-yellow);
+      }
+    }
+  }
+
+  &__description {
+    font-size: var(--font-body);
+    color: var(--hue-lightgrey);
+  }
+}
